@@ -1,0 +1,47 @@
+@media screen and (min-width: 450px) (max-widtn: 742px){
+	*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #1c1c1c;
+	font-family: "Comfortaa", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 400;
+ 	 font-style: normal;
+}
+.container{
+	max-widtn: 742px;
+}
+.section4{
+	display: grid;
+	row-gap: 155px;
+	justify-content: space-around;
+	align-items: center;
+}
+.footer{
+	background: #404040;
+	max-width: 742px;
+	height: 366px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.h3v2{
+	color: white;
+}
+.twitter{
+	width: 70px;
+	height: 63px;
+}
+.viber{
+	width: 70px;
+	height: 63px;
+}
+.telega{
+	width: 70px;
+	height: 63px;
+}
+}
