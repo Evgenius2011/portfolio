@@ -1,8 +1,11 @@
-@media screen and (min-width: 450px) (max-widtn: 742px){
+@media screen and (min-width: 450px) and (max-width: 742px){
 	*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+a{
+	display: none;
 }
 body{
 	background: #1c1c1c;
@@ -11,8 +14,115 @@ body{
   	font-weight: 400;
  	 font-style: normal;
 }
+input{
+	display: none;	
+}
+span{
+	width: 109px;
+	height: 23px;
+	background: linear-gradient(180deg, #B0B0B0 14.35%, #4A4A4A 130.43%);
+border-radius: 50px;
+position: absolute;
+}
+span:after{
+	content: '';
+	width: 109px;
+	height: 23px;
+	background: linear-gradient(180deg, #B0B0B0 14.35%, #4A4A4A 130.43%);
+	border-radius: 50px;
+position: absolute;
+top: 27px;
+}
+span:before{
+	content: '';
+	width: 109px;
+	height: 23px;
+	background: linear-gradient(180deg, #B0B0B0 14.35%, #4A4A4A 130.43%);
+	border-radius: 50px;
+position: absolute;
+top: 54px;
+}
+li{
+	display: none;
+}
+ul{
+        display: none;
+    }
+
+    .link{
+        color: #000;
+    }
+
+    input:checked ~ label>span{
+        display: block;
+    }
+
+    input:checked ~ ul{
+        max-width: 768px;
+        height: 306px;
+        display: flex;
+        background: #1c1c1c;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        position: absolute;     
+        top: 55px;
+        left: 0;
+        right: 0;
+    }
+
+    input:checked ~ label>span{
+        background: transparent;
+    }
+
+    input:checked ~ label>span::before{
+        animation: left 1s ease 0.1s forwards;
+        top: 1px;
+        position: absolute;
+    }
+
+    input:checked ~ label>span::after{
+        animation: right 1s ease 0.1s forwards;
+        top: -1px;
+        position: absolute;
+    }
+    @keyframes left {
+        from{
+            transform: rotate(0deg);
+        }
+
+        to{
+            transform: rotate(130deg);
+        }
+    }
+
+    @keyframes right {
+        from{
+            transform: rotate(0deg);
+        }
+
+        to{
+            transform: rotate(-130deg);
+        }
+    }
+
+    input:checked ~ ul>li{
+        display: block;
+        color: white;
+    }
+
+    input:checked ~ ul>li>.link{
+        display: block;
+        font-size: 24px;
+    }
+
+
+.text{
+	color: white;
+}
 .container{
-	max-widtn: 742px;
+	max-width: 742px;
 }
 .section4{
 	display: grid;
@@ -43,5 +153,15 @@ body{
 .telega{
 	width: 70px;
 	height: 63px;
+}
+.polzunok{
+	height: 46px;
+background: linear-gradient(270deg, #B0B0B0 33.91%, #767676 39.47%, #4A4A4A 41.88%);
+	border-radius: 50px;
+}
+.polzunok2{
+	height: 46px;
+	background: linear-gradient(270deg, #B0B0B0 8.38%, #646464 19.03%, #4A4A4A 19.04%);
+	border-radius: 50px; 
 }
 }
